@@ -249,84 +249,10 @@ Figure 1: Switched Virtual Interfaces (SVI's) for the 3550 (Logical Routing)....
 Rob Webber s CCIE Notes from Experience  
 Version 7.0 
 Figure 10: Using "Tools" To Help Troubleshooting...........................................102
- These documents are registered with the U.S. Copyright office. It is 
-illegal to sell, reproduce or distribute any portion of this document. 
-I worked hard to create a study guide to help you achieve your CCIE. 
-Please respect my work and obey the law! 
-© Copyright 2006, Rob Webber  
-7 
-Rob Webber s CCIE Notes from Experience  
-Introduction
- Version 7.0 
-The first section of this guide, Notes From Experience, 
-discusses issues, tricks and approaches to many networking 
-problems. This section attempts to explain how and why to do 
-certain things. 
-This guide does not attempt to explain the basics of BGP, 
-OSPF, Frame Relay and other networking topics  there are 
-many references for that. Instead this guide provides useful 
-insights and explanations of the more subtle and complex 
-aspects of networking. 
-The second section of this guide, Study Sheet, is a compilation 
-of many condensed configurations, quick explanations and 
-useful show and debug commands. This section is 
-appropriate as a quick refresher on various configurations and 
-a good review point as you make your final preparations for the 
-exam.
- Note: Included with some configs in the Study Sheet section are debug
- and show commands. Obviously these are not part of the configuration, 
-but are included since I feel these are the most valuable debug and show 
-commands related to the given technology. 
-© Copyright 2006, Rob Webber  
-8 
-Rob Webber s CCIE Notes from Experience  
-Foreword
- Version 7.0 
-As you prepare for the CCIE lab exam expose yourself to as many topics 
-as you can  NTP, Multicast, Tunnels, NAT, etc. However do not do this at 
-the sacrifice of knowing the core topics inside and out. 
-The core topics include OSPF, BGP, redistribution, access lists, and 
-Frame Relay. Know these so well you can configure them in your 
-sleep (yes, you will find yourself dreaming about router configs)!
- Know what every command in the command reference does for these 
-topics. You will not have time to look-up very much on these topics (there 
-will be other topics during the exam which will require your time to look
-up). You simply must know these extremely well!! 
-There is a second set of topics that is not quite as fundamental as those 
-listed above, but still important and likely to appear on the exam. These 
-include IPSec, EIGRP, RIP, route maps and Multicast. Get extremely 
-familiar with these and practice them. 
-Once you have mastered these topics, then you can spend time on the 
-less common topics. I recommend spending the final 2-4 weeks before 
-your lab exam practicing on the core (and possibly the second set of) 
-topics!
- As I prepared for my exam, I first mastered the core topics. I spent the 
-time necessary learning OSPF, BGP, Frame Relay, redistribution and 
-access-lists extremely well. For me this required many months. Once I 
-knew these inside and out, I tackled the second set of topics. I learned 
-these thoroughly, though perhaps not quite as in-depth as the core topics. 
-This required several months. I then pursued the odd ball topics. These 
-are the little things that might end up being worth 5, 10 or 15 points on the 
-exam. In most cases I didn t learn every command nor did I try every 
-possible scenario in the lab. Instead I tried a few common scenarios for 
-each topic and generally tried to become somewhat familiar with a lot of 
-the commands. I went on the assumption that if I knew a fair amount 
-about these topics, I could probably figure out the rest on the fly (and even 
-if I couldn t, it should only cost me a few points).
- About 4-6 weeks before my exam I made a conscious decision to 
-abandon the oddball topics and re-focus on the core and second set of 
-topics. This made sure that all the really important skills were fresh and it 
-instilled confidence in me that I knew these topics very well. Two or three 
-days before the exam I stopped all my lab work, figuring if I hadn t learned 
-a topic by then I wasn t about to do it at that point. Instead I tried to relax 
-as much as possible and calmly reviewed these notes. That was my 
-strategy. Hopefully yours will work well for you! 
-© Copyright 2006, Rob Webber  
-9 
-Rob Webber s CCIE Notes from Experience  
-3550
- Version 7.0 
-The 3550 is a very flexible device within Cisco s product line. Not only can 
+
+
+
+ Cisco s product line. Not only can 
 it provide Layer 2 and Layer 3 switching (much like the 6500 with an 
 MSFC module) it does not use different hardware for these two tasks. It 
 also allows configuration of Layer 2 and Layer 3 configurations from the 
